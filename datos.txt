@@ -1,0 +1,3 @@
+User;<Your DBUser>
+Pass;<Your DBPassword>
+Token;<Your bot's token>
