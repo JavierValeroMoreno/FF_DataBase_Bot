@@ -8,15 +8,17 @@ import pymysql.cursors
 
 
 datos = open('datos.txt', 'r')
-User = datos.readline().split(":")[1]
-Pass = datos.readline().split(":")[1]
+User = datos.readline().split(";")[1].strip()
+Pass = datos.readline().split(";")[1].strip()
 
+print (User)
+print (Pass)
 
-conection = pymysql.connect(host = 'localhost', user = User, password = Pass,db = 'FinalFantasy', charset = 'utf8mb4', cursorclass = pymysql.cursors.DictCursor)
+conection = pymysql.connect(host = 'localhost', user = User , password = Pass ,db = 'FinalFantasy', charset = 'utf8mb4', cursorclass = pymysql.cursors.DictCursor)
 cur = conection.cursor()
 
 
-TOKEN = datos.readline().split(":")[1] # Nuestro tokken del bot (el que @BotFather nos dió).
+TOKEN = datos.readline().split(";")[1].strip() # Nuestro tokken del bot (el que @BotFather nos dió).
 bot = telebot.TeleBot(TOKEN) # Creamos el objeto de nuestro bot.
 
 def listener(messages): # Con esto, estamos definiendo una función llamada 'listener', que recibe como parámetro un dato llamado 'messages'.
