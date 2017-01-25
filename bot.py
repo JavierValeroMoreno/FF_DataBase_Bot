@@ -14,7 +14,7 @@ Pass = datos.readline().split(";")[1].strip()
 print (User)
 print (Pass)
 
-conection = pymysql.connect(host = 'localhost', user = User , password = Pass ,db = 'FinalFantasy', charset = 'utf8mb4', cursorclass = pymysql.cursors.DictCursor)
+conection = pymysql.connect(host = '127.0.0.1', user = 'root' , password = '' ,db = 'FinalFantasy', charset = 'utf8mb4', cursorclass = pymysql.cursors.DictCursor)
 cur = conection.cursor()
 
 
@@ -54,7 +54,7 @@ def printC(row):
 		cadena = "Nombre - EX - Cantidad Campo : " + row['Nombre'] + " - " + str(row['Ex']) + " - " + str(row['Campo']) + "\nCoste , Elemento: [" + str(row['Coste']) + ", " + row['Elemento'] + "]" + "\nTipo / Oficio / Categoria : " + row['Tipo'] + " / " + row['Oficio'] + " / " + row['Categoria'] + '\nTexto:\n'+ row['Texto'] +"\nPoder : " + str(row['Poder']) + "\nSerie : " + row['ID_Sobre'] + "-" + row['ID_Carta'] + row['Rareza']
 	if row['Tipo'] == 'Apoyo':
 		cadena = "Nombre - EX - Cantidad Campo : " + row['Nombre'] + " - " + str(row['Ex']) + " - " + str(row['Campo']) + "\nCoste , Elemento: [" + str(row['Coste']) + ", " + row['Elemento'] + "]" + "\nTipo / Oficio / Categoria : " + row['Tipo'] + " / " + row['Oficio'] + " / " + row['Categoria'] + '\nTexto:\n'+ row['Texto'] + "\nSerie : " + row['ID_Sobre'] + "-" + row['ID_Carta'] + row['Rareza']
-	if row['Tipo'] == 'Invocación':
+	if row['Tipo'] == u'Invocación':
 		cadena = "Nombre - EX : " + row['Nombre'] + " - " + str(row['Ex']) + "\nCoste , Elemento: [" + str(row['Coste']) + ", " + row['Elemento'] + "]" + "\nTipo / Categoria : " + row['Tipo'] + " / " + row['Categoria'] + '\nTexto:\n'+ row['Texto'] + "\nSerie : " + row['ID_Sobre'] + "-" + str(row['ID_Carta']) + row['Rareza']
 	print (cadena)
 	
