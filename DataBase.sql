@@ -1,3 +1,5 @@
+CREATE DATABASE FinalFantasy;
+
 use FinalFantasy;
 
 CREATE TABLE Sobre(
