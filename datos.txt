@@ -1,3 +1,3 @@
-User;<Your DBUser>
-Pass;<Your DBPassword>
-Token;<Your bot's token>
+User;root
+Pass;SOCkPHS6
+Token;285277418:AAExDZ2SXIQW6aJS1I-yhtHYxp-WAVsyIaY
